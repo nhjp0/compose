@@ -3,8 +3,6 @@ services:
 ################## 01 #######################
   openvpn-1:
     image: free32com/openvpn-nc
-    cap_add:
-      - net_admin
     devices:
       - /dev/net/tun:/dev/net/tun
     ports:
@@ -17,80 +15,4 @@ services:
     environment:
       - MAIL=xiaomi.blackshark04@gmail.com
       - IP_PORT=4001
-    network_mode: "host"
-
-################## 02 #######################
-  openvpn-2:
-    image: free32com/openvpn-nc
-    cap_add:
-      - net_admin
-    devices:
-      - /dev/net/tun:/dev/net/tun
-    ports:
-      - "4002:1080"
-    environment:
-      - IP_SERVER=iad-b17.vpn.wlvpn.com
-  
-  p2p-2:
-    image: free32com/ubuntu-p2p:1.1
-    environment:
-      - MAIL=xiaomi.blackshark04@gmail.com
-      - IP_PORT=4002
-    network_mode: "host"
-
-################## 03 #######################
-  openvpn-3:
-    image: free32com/openvpn-nc
-    cap_add:
-      - net_admin
-    devices:
-      - /dev/net/tun:/dev/net/tun
-    ports:
-      - "4003:1080"
-    environment:
-      - IP_SERVER=los-c02.vpn.wlvpn.com
-  
-  p2p-3:
-    image: free32com/ubuntu-p2p:1.1
-    environment:
-      - MAIL=xiaomi.blackshark04@gmail.com
-      - IP_PORT=4003
-    network_mode: "host"
-
-################## 04 #######################
-  openvpn-4:
-    image: free32com/openvpn-nc
-    cap_add:
-      - net_admin
-    devices:
-      - /dev/net/tun:/dev/net/tun
-    ports:
-      - "4004:1080"
-    environment:
-      - IP_SERVER=dal-b24.vpn.wlvpn.com
-  
-  p2p-4:
-    image: free32com/ubuntu-p2p:1.1
-    environment:
-      - MAIL=xiaomi.blackshark04@gmail.com
-      - IP_PORT=4004
-    network_mode: "host"
-
-################## 05 #######################
-  openvpn-5:
-    image: free32com/openvpn-nc
-    cap_add:
-      - net_admin
-    devices:
-      - /dev/net/tun:/dev/net/tun
-    ports:
-      - "4005:1080"
-    environment:
-      - IP_SERVER=sto-a07.vpn.wlvpn.com
-  
-  p2p-5:
-    image: free32com/ubuntu-p2p:1.1
-    environment:
-      - MAIL=xiaomi.blackshark04@gmail.com
-      - IP_PORT=4005
     network_mode: "host"
