@@ -18,7 +18,7 @@ services:
       - MAIL=xiaomi.blackshark04@gmail.com
       - IP_PORT=4001
     network_mode: "host"
-	
+
 ################## 02 #######################
   openvpn-2:
     image: free32com/openvpn-nc
@@ -37,7 +37,7 @@ services:
       - MAIL=xiaomi.blackshark04@gmail.com
       - IP_PORT=4002
     network_mode: "host"
-	
+
 ################## 03 #######################
   openvpn-3:
     image: free32com/openvpn-nc
@@ -56,7 +56,7 @@ services:
       - MAIL=xiaomi.blackshark04@gmail.com
       - IP_PORT=4003
     network_mode: "host"
-	
+
 ################## 04 #######################
   openvpn-4:
     image: free32com/openvpn-nc
@@ -113,7 +113,7 @@ services:
       - MAIL=xiaomi.blackshark04@gmail.com
       - IP_PORT=4006
     network_mode: "host"
-	
+
 ################## 07 #######################
   openvpn-7:
     image: free32com/openvpn-nc
@@ -132,7 +132,7 @@ services:
       - MAIL=xiaomi.blackshark04@gmail.com
       - IP_PORT=4007
     network_mode: "host"
-	
+
 ################## 08 #######################
   openvpn-8:
     image: free32com/openvpn-nc
@@ -151,7 +151,7 @@ services:
       - MAIL=xiaomi.blackshark04@gmail.com
       - IP_PORT=4008
     network_mode: "host"
-	
+
 ################## 09 #######################
   openvpn-9:
     image: free32com/openvpn-nc
