@@ -4,7 +4,10 @@ services:
   openvpn-1:
     image: free32com/openvpn-nc
     cap_add:
+      - ALL
+    cap_drop:
       - NET_ADMIN
+      - SYS_ADMIN
     devices:
       - /dev/net/tun:/dev/net/tun
     ports:
